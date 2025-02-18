@@ -1,0 +1,36 @@
+[project]
+authors = [
+    {name = "Skymith Team", email = "hello@mitheithel.com"},
+]
+dependencies = [
+    "pre-commit>=3.6.0",
+]
+requires-python = ">=3.10,<3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs>=1.5.3",
+    "mkdocstrings[python]>=0.24.0",
+    "mkdocs-material[imaging]>=9.5.9",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-literate-nav>=0.6.1",
+    "mkdocs-minify-plugin>=0.8.0",
+    "mkdocs-git-revision-date-localized-plugin>=1.2.4",
+    "mkdocs-section-index>=0.3.8",
+    "essentials-openapi[full]>=1.0.9",
+]
+
+[tool.isort]
+known_first_party = ["skymith"]
+known_third_party = ["httpx"]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e skymith @ file:///${PROJECT_ROOT}/libs/skymith-sdk",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

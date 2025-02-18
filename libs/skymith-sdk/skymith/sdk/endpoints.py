@@ -1,0 +1,6 @@
+SKYMITH_STRIDER_URI: str = "wss://service.gptstonks.net/service/agents/compare"
+SKYMITH_FINANCIAL_CONCEPT_URI: str = "https://service.gptstonks.net/recommend/me/concept"
+SKYMITH_FINANCIAL_NEWS_URI: str = "https://service.gptstonks.net/recommend/open/news"
+SKYMITH_FINANCIAL_TITLES_URI: str = "https://service.gptstonks.net/recommend/open/titles/all"
+SKYMITH_FINANCIAL_WIDGETS_URI: str = "https://service.gptstonks.net/recommend/query/widgets"
+SKYMITH_SEARCH_URI: str = "wss://service.gptstonks.net/service/agents/research"

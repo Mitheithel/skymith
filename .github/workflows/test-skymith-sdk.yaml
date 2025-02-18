@@ -1,0 +1,18 @@
+name: Tests skymith-sdk
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - ".github/workflows/_test.yaml"
+      - ".github/workflows/test-skymith-sdk.yaml"
+      - "libs/skymith-sdk/**"
+  workflow_dispatch: # Allows to trigger the workflow manually in GitHub UI
+
+jobs:
+  run-tests-skymith-sdk:
+    uses: ./.github/workflows/_test.yaml
+    with:
+      working-directory: libs/skymith-sdk
+    secrets: inherit

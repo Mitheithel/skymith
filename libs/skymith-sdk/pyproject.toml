@@ -1,0 +1,42 @@
+[project]
+name = "skymith"
+version = "0.0.1"
+description = "Flexible AI-driven services, everywhere, and for everyone."
+authors = [
+  { name="Mitheithel Team", email="hello@mitheithel.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = ["httpx>=0.28.1", "websockets>=15.0", "langchain>=0.3.18"]
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+testing = [
+    "pytest",
+    "pytest-cov",
+    "pytest-asyncio>=0.25.3",
+]
+
+[tool.pdm.build]
+excludes = ["./**/.git"]
+includes = ["skymith"]
+
+[project.urls]
+"Homepage" = "https://skymith.com"
+"GitHub" = "https://github.com/Mitheithel/skymith"
+"Documentation" = "https://docs.skymith.com/skymith"
+"Bug Tracker" = "https://github.com/Mitheithel/skymith/issues"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
